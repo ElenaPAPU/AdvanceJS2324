@@ -1,4 +1,4 @@
-class Carte {
+export default class Carte {
     constructor(titlu,autor, editura,an,pret) {
         this.titlu = titlu;
         this.autor = autor;
@@ -17,4 +17,4 @@ class Carte {
 }
 
 // Curs 2 Module
-//  export { Carte }
+// export { Carte };
