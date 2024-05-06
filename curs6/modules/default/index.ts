@@ -1,0 +1,4 @@
+import multiplyDefault from "./multiplayDefault";
+
+const multiply = multiplyDefault(2, 4);
+console.log(multiply);
