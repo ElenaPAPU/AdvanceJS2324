@@ -4,6 +4,7 @@ export interface BasicUser {
   export interface User extends BasicUser {
     nume: string,
     prenume: string,
+    cnp?: string,
     datanastere:Date, //string
     email:string,
     telefon: string,

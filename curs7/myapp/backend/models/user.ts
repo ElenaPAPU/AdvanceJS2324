@@ -15,6 +15,7 @@ export const findAll = (callback: Function) => {
         id: row.id,
         nume: row.nume,
         prenume: row.prenume,
+        cnp: row.cnp,
         email: row.email,
         datanastere: row.datanastere,
         telefon: row.telefon,
@@ -50,11 +51,11 @@ export const findOne = (userId: number, callback: Function) => {
 // create user
 export const create = (user: User, callback: Function) => {
   const queryString =
-    "INSERT INTO jsusers (nume, prenume, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?)";
+    "INSERT INTO jsusers (nume, prenume, cnp, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?, ?)";
     console.log(user);
   db.query(
     queryString,
-    [user.nume, user.prenume, user.email, user.datanastere, user.telefon],
+    [user.nume, user.prenume, user.cnp, user.email, user.datanastere, user.telefon],
     (err, result) => {
       if (err) {
         callback(err);
@@ -70,9 +71,9 @@ export const create = (user: User, callback: Function) => {
 
 // update user
 export const update = (user: User, callback: Function) => {
-  const queryString = `UPDATE jsusers SET nume=?, prenume=?, telefon=? WHERE id=?`;
+  const queryString = `UPDATE jsusers SET nume=?, prenume=?, cnp=?, telefon=?, email=? WHERE id=?`;
 
-  db.query(queryString, [user.nume, user.prenume, user.telefon, user.id], (err, result) => {
+  db.query(queryString, [user.nume, user.prenume, user.cnp, user.telefon, user.email, user.id], (err, result) => {
     if (err) {
       callback(err);
     }

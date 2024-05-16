@@ -51,6 +51,7 @@ $(document).ready(function ($) {
                 { "data": "id" },
                 { "data": "nume" },
                 { "data": "prenume" },
+                { "cnp": "cnp"},
                 { "data": "email" },
                 { "data": "telefon" },
                 {
