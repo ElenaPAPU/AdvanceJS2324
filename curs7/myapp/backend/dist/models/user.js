@@ -52,9 +52,9 @@ const findOne = (userId, callback) => {
 exports.findOne = findOne;
 // create user
 const create = (user, callback) => {
-    const queryString = "INSERT INTO jsusers (nume, prenume, cnp, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?, ?)";
+    const queryString = "INSERT INTO jsusers (nume, prenume, cnp, email, datanastere, telefon, poza) VALUES (?, ?, ?, ?, ?, ?,?)";
     console.log(user);
-    db_1.db.query(queryString, [user.nume, user.prenume, user.cnp, user.email, user.datanastere, user.telefon], (err, result) => {
+    db_1.db.query(queryString, [user.nume, user.prenume, user.cnp, user.email, user.datanastere, user.telefon, user.poza], (err, result) => {
         if (err) {
             callback(err);
         }

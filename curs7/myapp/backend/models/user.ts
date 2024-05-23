@@ -51,11 +51,11 @@ export const findOne = (userId: number, callback: Function) => {
 // create user
 export const create = (user: User, callback: Function) => {
   const queryString =
-    "INSERT INTO jsusers (nume, prenume, cnp, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?, ?)";
+    "INSERT INTO jsusers (nume, prenume, cnp, email, datanastere, telefon, poza) VALUES (?, ?, ?, ?, ?, ?,?)";
     console.log(user);
   db.query(
     queryString,
-    [user.nume, user.prenume, user.cnp, user.email, user.datanastere, user.telefon],
+    [user.nume, user.prenume, user.cnp, user.email, user.datanastere, user.telefon, user.poza],
     (err, result) => {
       if (err) {
         callback(err);
